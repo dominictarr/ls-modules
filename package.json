@@ -1,7 +1,7 @@
 {
   "name": "ls-modules",
   "description": "list the currently requireable modules",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "homepage": "https://github.com/dominictarr/ls-modules",
   "repository": {
     "type": "git",

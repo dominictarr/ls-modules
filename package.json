@@ -7,16 +7,15 @@
     "type": "git",
     "url": "git://github.com/dominictarr/ls-modules.git"
   },
-  "dependencies": {
-  },
-  "devDependencies": {
-  },
+  "dependencies": {},
+  "devDependencies": {},
   "scripts": {
     "test": "set -e; for t in test/*.js; do node $t; done"
   },
-  "bin":  {
+  "bin": {
     "npm-ls": "./index.js"
   },
   "author": "Dominic Tarr <dominic.tarr@gmail.com> (http://dominictarr.com)",
-  "license": "MIT"  
+  "license": "MIT",
+  "stability": "stable"
 }

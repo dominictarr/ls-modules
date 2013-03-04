@@ -66,19 +66,23 @@ exports.parentDirs = parentDirs
 if(!module.parent)
   exports(process.cwd(), function (err, pkgs) {
     console.log(
-      tablify(pkgs.map(function (p) {
-        return {
-          name    : p.name, 
-          version : p.version,
-          path    : path.relative(process.cwd(), p.path)
-        }
-      }), {
-        row_start: ' ', row_end: ' ', spacer: ' ',
-        keys: ['name', 'version', 'path'],
-        row_sep_char: ' ',
-        show_index: false,
-        has_header: false
-      })
+      (
+        tablify(pkgs.map(function (p) {
+          return {
+            name    : p.name, 
+            version : p.version,
+            path    : path.relative(process.cwd(), p.path)
+          }
+        }), {
+          row_start: ' ', row_end: ' ', spacer: '  ',
+          keys: ['name', 'version', 'path'],
+          row_sep_char: ' ',
+          show_index: false,
+          has_header: false
+        })
+      ).split(/---+/g).join('').split('\n').map(function(e) {
+        return e.trim()
+      }).join('\n').trim()
     )
   })
 
